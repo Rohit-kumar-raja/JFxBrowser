@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.web.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <center>
+      <AnchorPane BorderPane.alignment="CENTER">
+         <children>
+            <WebView fx:id="webView" maxHeight="-1.0" maxWidth="-1.0" minHeight="-1.0" minWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <cursor>
+                  <Cursor fx:constant="WAIT" />
+               </cursor></WebView>
+         </children>
+      </AnchorPane>
+   </center>
+   <top>
+      <AnchorPane prefHeight="35.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <TextField fx:id="textField" layoutX="140.0" layoutY="5.0" onAction="#pageLoded" prefHeight="25.0" prefWidth="600.0" style="-fx-background-color: rgb(230, 221, 221); -fx-border-radius: 20%;">
+               <padding>
+                  <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+               </padding>
+            </TextField>
+            <Button layoutX="7.0" layoutY="6.0" mnemonicParsing="false" onAction="#back" style="-fx-background-color: gray; -fx-background-radius: 90%;" text="← " textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font></Button>
+            <Button contentDisplay="TOP" graphicTextGap="5.0" layoutX="50.0" layoutY="6.0" mnemonicParsing="false" onAction="#forward" style="-fx-background-color: gray; -fx-background-radius: 90%;" text=" →" textAlignment="RIGHT" textFill="#fcf6f5" textOverrun="WORD_ELLIPSIS" wrapText="true">
+               <font>
+                  <Font name="Bitstream Vera Sans Bold" size="13.0" />
+               </font></Button>
+            <Button layoutX="750.0" layoutY="5.0" mnemonicParsing="false" onAction="#pageLoded" text=" ⚡" />
+            <Button layoutX="90.0" layoutY="5.0" mnemonicParsing="false" onAction="#Reload" style="-fx-background-color: gray; -fx-background-radius: 90%;" text="⟳">
+               <graphic>
+                  <ProgressIndicator fx:id="progressID" prefHeight="29.0" prefWidth="35.0" style="-fx-background-color: dark; -fx-background-radius: 90%;">
+                     <effect>
+                        <Lighting>
+                           <bumpInput>
+                              <Shadow />
+                           </bumpInput>
+                           <light>
+                              <Light.Distant />
+                           </light>
+                        </Lighting>
+                     </effect></ProgressIndicator>
+               </graphic>
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="#62e038" />
+                        <Stop color="WHITE" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </textFill></Button>
+         </children>
+      </AnchorPane>
+   </top>
+</BorderPane>
